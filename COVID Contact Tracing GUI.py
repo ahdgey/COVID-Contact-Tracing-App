@@ -91,8 +91,14 @@ class ContactTracingAppGUI:
 
         self.date_entry = tk.Entry(root)
         self.date_entry.grid(row=2, column=5, pady=15, padx=10)
+
+        #Time
+        self.time_label = tk.Label(root, text="Time right now: ")
+        self.time_label.grid(row=3, column=4, padx=15, pady=10, sticky=tk.W)
+
+        self.time_entry = tk.Entry(root)
+        self.time_entry.grid(row=3, column=5, pady=15, padx=10)
         
-#Time
 #Create a list to store the StringVar variables for the radio button sets
 #If vaccinated already
 #If experiencing any symptoms
