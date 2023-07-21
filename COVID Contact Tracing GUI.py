@@ -218,8 +218,11 @@ class ContactTracingAppGUI:
         def add_entry(self):
             self.clear_entries()
             messagebox.showinfo("Confirmation", "Your entry has been submitted.")
-            
-#Method to handle search_entry 
+
+        #Method to handle search_entry 
+        def search_entry(self):
+            name = self.name_entry.get()
+
 #From the ContactTracingApp class, call all the search_entry method and message box
 #Clear all entry fields and reset the radio buttons
 #Create the main window
