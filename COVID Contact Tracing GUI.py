@@ -98,8 +98,10 @@ class ContactTracingAppGUI:
 
         self.time_entry = tk.Entry(root)
         self.time_entry.grid(row=3, column=5, pady=15, padx=10)
+
+        #Create a list to store the StringVar variables for the radio button sets
+        self.radiobutton_vars = []
         
-#Create a list to store the StringVar variables for the radio button sets
 #If vaccinated already
 #If experiencing any symptoms
 #If had been recently exposed to a suspected or confirmed case
