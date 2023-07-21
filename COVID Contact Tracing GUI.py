@@ -223,6 +223,15 @@ class ContactTracingAppGUI:
         def search_entry(self):
             name = self.name_entry.get()
 
-#From the ContactTracingApp class, call all the search_entry method and message box
+            #From the ContactTracingApp class, call all the search_entry method and message box
+            entry = self.contact_tracing.search_entry(name)
+
+            if entry:
+                print("Confirmation", "Your entry has been found:")
+                for item in entry:
+                    print(item)
+            else:
+                messagebox.showinfo("Error", "Your entry has not found")
+                
 #Clear all entry fields and reset the radio buttons
 #Create the main window
