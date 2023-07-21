@@ -28,8 +28,14 @@ class ContactTracingAppGUI:
 
         self.bday_entry = tk.Entry(root)
         self.bday_entry.grid(row=1, column=1, pady=15, padx=10)
+
+        #Gender
+        self.gender_label = tk.Label(root, text="Gender: ")
+        self.gender_label.grid(row=2, column=0, padx=15, pady=10, sticky=tk.W)
+
+        self.gender_entry = tk.Entry(root)
+        self.gender_entry.grid(row=2, column=1, pady=15, padx=10)
         
-#Gender
 #Phone Number
 #Email Address
 #Address
