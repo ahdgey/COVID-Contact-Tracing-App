@@ -130,7 +130,20 @@ class ContactTracingAppGUI:
         self.symptoms_radiobutton_2 = tk.Radiobutton(root, text="No", variable=self.radiobutton_2_var, value="No")
         self.symptoms_radiobutton_2.grid(row=7, column=4)
 
-#If had been recently exposed to a suspected or confirmed case
+        #If had been recently exposed to a suspected or confirmed case
+        self.radiobutton_3_var = tk.StringVar()
+        self.radiobutton_3_var.set(None)
+        self.radiobutton_vars.append(self.radiobutton_3_var)
+
+        self.exposed_label = tk.Label(root, text="Have you recently been exposed to a suspected or confirmed case?")
+        self.exposed_label.grid(row=8, column=2, padx=15, pady=10, sticky=tk.W)
+        
+        self.exposed_radiobutton_1 = tk.Radiobutton(root, text="Yes", variable=self.radiobutton_3_var, value="Yes")
+        self.exposed_radiobutton_1.grid(row=9, column=2)
+
+        self.exposed_radiobutton_2 = tk.Radiobutton(root, text="No", variable=self.radiobutton_3_var, value="No")
+        self.exposed_radiobutton_2.grid(row=10, column=2)
+        
 #If had been engaged with somebody who maybe exhibiting symptoms
 #If have been undergone a Covid-19 test
 #If have been undergone a self quarantine
