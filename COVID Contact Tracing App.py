@@ -27,4 +27,12 @@ class ContactTacingApp:
                     entries.append(row)
         return entries
     
-#Create a list to store the selected values from the radio button sets 
+    #Create a list to store the selected values from the radio button sets 
+    def get_radio_button_values(self):
+        selected_values = []
+
+        for var in self.radiobutton.vars:
+            selected_value = var.get()
+            selected_values.append(selected_value)
+
+        return selected_value
