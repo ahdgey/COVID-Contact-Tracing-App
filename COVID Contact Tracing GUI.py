@@ -70,8 +70,14 @@ class ContactTracingAppGUI:
 
         self.phone_2_entry = tk.Entry(root)
         self.phone_2_entry.grid(row=3, column=3, pady=15, padx=10)
+
+        #Contact Person Email Address
+        self.email_2_label = tk.Label(root, text="Contact Person Email Address: ")
+        self.email_2_label.grid(row=0, column=4, padx=15, pady=10, sticky=tk.W)
+
+        self.email_2_entry = tk.Entry(root)
+        self.email_2_entry.grid(row=0, column=5, pady=15, padx=10)
         
-#Contact Person Email Address
 #Relationship to the contact person
 #Date today
 #Time
