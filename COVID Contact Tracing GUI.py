@@ -253,5 +253,9 @@ class ContactTracingAppGUI:
             self.radiobutton_4_var.set(None) 
             self.radiobutton_5_var.set(None) 
             self.radiobutton_6_var.set(None)
-            
+
 #Create the main window
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = ContactTracingAppGUI(root)
+    root.mainloop()
