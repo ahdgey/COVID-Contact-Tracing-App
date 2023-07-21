@@ -213,8 +213,12 @@ class ContactTracingAppGUI:
             quarantine_1 = self.radiobutton_6_var.get() 
 
             self.contact_tracing.add_entry(name, bday, gender, phone, email, address, name_2, phone_2, email_2, relationship, date, time, vaccine_1, symptoms_1, exposed_1, engaged_1, test_1, quarantine_1)
+
+        #Method to show the message box 
+        def add_entry(self):
+            self.clear_entries()
+            messagebox.showinfo("Confirmation", "Your entry has been submitted.")
             
-#Method to show the message box 
 #Method to handle search_entry 
 #From the ContactTracingApp class, call all the search_entry method and message box
 #Clear all entry fields and reset the radio buttons
