@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from COVID_Contact_Tracing_App import ContactTacingApp
+from COVID_Contact_Tracing_App import ContactTracingApp
 
 class ContactTracingAppGUI:
     def __init__(self, root):
@@ -185,8 +185,10 @@ class ContactTracingAppGUI:
 
         self.quarantine_radiobutton_2 = tk.Radiobutton(root, text="No", variable=self.radiobutton_6_var, value="No")
         self.quarantine_radiobutton_2.grid(row=13, column=4)
-        
-#Create an instance of the contact tracing app
+
+        #Create an instance of the contact tracing app
+        self.contact_tracing = ContactTracingApp()
+
 #Method to handle add_entry 
 #Get all the input values from the entry fields and radiobutton variables
 #Method to show the message box 
