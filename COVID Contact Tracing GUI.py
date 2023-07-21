@@ -191,8 +191,29 @@ class ContactTracingAppGUI:
 
         #Method to handle add_entry 
         def add_entry(self):
+
+            #Get all the input values from the entry fields and radiobutton variables
+            name = self.name_entry.get()
+            bday = self.bday_entry.get()
+            gender = self.gender_entry.get()
+            phone = self.phone_entry.get()
+            email = self.email_entry.get()
+            address = self.address_entry.get()
+            name_2 = self.name_2_entry.get()
+            phone_2 = self.phone_2_entry.get()
+            email_2 = self.email_2_entry.get()
+            relationship = self.relationship_entry.get()
+            date = self.date_entry.get()
+            time = self.time_entry.get()
+            vaccine_1 = self.radiobutton_1_var.get() 
+            symptoms_1 = self.radiobutton_2_var.get() 
+            exposed_1 = self.radiobutton_3_var.get() 
+            engaged_1 = self.radiobutton_4_var.get() 
+            test_1 = self.radiobutton_5_var.get() 
+            quarantine_1 = self.radiobutton_6_var.get() 
+
+            self.contact_tracing.add_entry(name, bday, gender, phone, email, address, name_2, phone_2, email_2, relationship, date, time, vaccine_1, symptoms_1, exposed_1, engaged_1, test_1, quarantine_1)
             
-#Get all the input values from the entry fields and radiobutton variables
 #Method to show the message box 
 #Method to handle search_entry 
 #From the ContactTracingApp class, call all the search_entry method and message box
