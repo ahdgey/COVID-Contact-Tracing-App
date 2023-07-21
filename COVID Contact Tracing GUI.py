@@ -21,8 +21,14 @@ class ContactTracingAppGUI:
 
         self.name_entry = tk.Entry(root)
         self.name_entry.grid(row=0, column=1, pady=15, padx=10)
+
+        #Date of Birth
+        self.bday_label = tk.Label(root, text="Date of Birth: ")
+        self.bday_label.grid(row=1, column=0, padx=15, pady=10, sticky=tk.W)
+
+        self.bday_entry = tk.Entry(root)
+        self.bday_entry.grid(row=1, column=1, pady=15, padx=10)
         
-#Date of Birth
 #Gender
 #Phone Number
 #Email Address
