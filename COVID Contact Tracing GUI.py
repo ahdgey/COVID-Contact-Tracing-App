@@ -101,8 +101,21 @@ class ContactTracingAppGUI:
 
         #Create a list to store the StringVar variables for the radio button sets
         self.radiobutton_vars = []
-        
-#If vaccinated already
+
+        #If vaccinated already
+        self.radiobutton_1_var = tk.StringVar()
+        self.radiobutton_1_var.set(None)
+        self.radiobutton_vars.append(self.radiobutton_1_var)
+
+        self.vaccine_label = tk.Label(root, text="Do you have a COVID-19 vaccine? ")
+        self.vaccine_label.grid(row=5, column=2, padx=15, pady=10, sticky=tk.W)
+
+        self.vaccine_radiobutton_1 = tk.Radiobutton(root, text="Yes", variable=self.radiobutton_1_var, value="Yes")
+        self.vaccine_radiobutton_1.grid(row=6, column=2)
+
+        self.vaccine_radiobutton_2 = tk.Radiobutton(root, text="No", variable=self.radiobutton_1_var, value="No")
+        self.vaccine_radiobutton_2.grid(row=7, column=2)
+
 #If experiencing any symptoms
 #If had been recently exposed to a suspected or confirmed case
 #If had been engaged with somebody who maybe exhibiting symptoms
