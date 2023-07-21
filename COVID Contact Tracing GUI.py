@@ -77,8 +77,14 @@ class ContactTracingAppGUI:
 
         self.email_2_entry = tk.Entry(root)
         self.email_2_entry.grid(row=0, column=5, pady=15, padx=10)
+
+        #Relationship to the contact person
+        self.relationship_label = tk.Label(root, text="Relationship to the contact person: ")
+        self.relationship_label.grid(row=1, column=4, padx=15, pady=10, sticky=tk.W)
+
+        self.relationship_entry = tk.Entry(root)
+        self.relationship_entry.grid(row=1, column=5, pady=15, padx=10)
         
-#Relationship to the contact person
 #Date today
 #Time
 #Create a list to store the StringVar variables for the radio button sets
