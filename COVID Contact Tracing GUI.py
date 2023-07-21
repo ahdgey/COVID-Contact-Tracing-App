@@ -13,9 +13,15 @@ class ContactTracingAppGUI:
 
         self.search_button = tk.Button(root, text="Search Entry", command=self.search_entry)
         self.search_button.grid(row=15, column=4, padx=15, pady=10)
+
+        #Create the labels, entry, and grid fields
+        #Name
+        self.name_label = tk.Label(root, text="Name: ")
+        self.name_label.grid(row=0, column=0, padx=15, pady=10, sticky=tk.W)
+
+        self.name_entry = tk.Entry(root)
+        self.name_entry.grid(row=0, column=1, pady=15, padx=10)
         
-#Create the labels, entry, and grid fields
-#Name
 #Date of Birth
 #Gender
 #Phone Number
