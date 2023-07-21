@@ -232,6 +232,26 @@ class ContactTracingAppGUI:
                     print(item)
             else:
                 messagebox.showinfo("Error", "Your entry has not found")
-                
-#Clear all entry fields and reset the radio buttons
+
+        #Clear all entry fields and reset the radio buttons
+        def clear_entries(self):
+            self.name_entry.delete(0, tk.END)
+            self.bday_entry.delete(0, tk.END)
+            self.gender_entry.delete(0, tk.END)
+            self.phone_entry.delete(0, tk.END)
+            self.email_entry.delete(0, tk.END)
+            self.address_entry.delete(0, tk.END)
+            self.name_2_entry.delete(0, tk.END)
+            self.phone_2_entry.delete(0, tk.END)
+            self.email_2_entry.delete(0, tk.END)
+            self.relationship_entry.delete(0, tk.END)
+            self.date_entry.delete(0, tk.END)
+            self.time_entry.delete(0, tk.END)
+            self.radiobutton_1_var.set(None) 
+            self.radiobutton_2_var.set(None) 
+            self.radiobutton_3_var.set(None) 
+            self.radiobutton_4_var.set(None) 
+            self.radiobutton_5_var.set(None) 
+            self.radiobutton_6_var.set(None)
+            
 #Create the main window
