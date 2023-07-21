@@ -171,8 +171,21 @@ class ContactTracingAppGUI:
 
         self.test_radiobutton_2 = tk.Radiobutton(root, text="No", variable=self.radiobutton_5_var, value="No")
         self.test_radiobutton_2.grid(row=13, column=2)
+
+        #If have been undergone a self quarantine
+        self.radiobutton_6_var = tk.StringVar()
+        self.radiobutton_6_var.set(None)
+        self.radiobutton_vars.append(self.radiobutton_6_var)
+
+        self.quarantine_label = tk.Label(root, text="In the previous 14 days, have you undergone a self quarantine?")
+        self.quarantine_label.grid(row=11, column=4, padx=15, pady=10, sticky=tk.W)
         
-#If have been undergone a self quarantine
+        self.quarantine_radiobutton_1 = tk.Radiobutton(root, text="Yes", variable=self.radiobutton_6_var, value="Yes")
+        self.quarantine_radiobutton_1.grid(row=12, column=4)
+
+        self.quarantine_radiobutton_2 = tk.Radiobutton(root, text="No", variable=self.radiobutton_6_var, value="No")
+        self.quarantine_radiobutton_2.grid(row=13, column=4)
+        
 #Create an instance of the contact tracing app
 #Method to handle add_entry 
 #Get all the input values from the entry fields and radiobutton variables
