@@ -6,8 +6,14 @@ class ContactTracingAppGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("COVID Contact Tracing App")
+
+        #Create add entry and search entry buttons plus the grid
+        self.add_button = tk.Button(root, text="Add Entry", command=self.add_entry)
+        self.add_button.grid(row=15, column=2, padx=15, pady=10)
+
+        self.search_button = tk.Button(root, text="Search Entry", command=self.search_entry)
+        self.search_button.grid(row=15, column=4, padx=15, pady=10)
         
-#Create add entry and search entry buttons plus the grid
 #Create the labels, entry, and grid fields
 #Name
 #Date of Birth
