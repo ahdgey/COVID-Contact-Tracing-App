@@ -189,7 +189,9 @@ class ContactTracingAppGUI:
         #Create an instance of the contact tracing app
         self.contact_tracing = ContactTracingApp()
 
-#Method to handle add_entry 
+        #Method to handle add_entry 
+        def add_entry(self):
+            
 #Get all the input values from the entry fields and radiobutton variables
 #Method to show the message box 
 #Method to handle search_entry 
