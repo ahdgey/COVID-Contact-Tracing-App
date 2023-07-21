@@ -2,6 +2,11 @@ import tkinter as tk
 from tkinter import messagebox
 from COVID_Contact_Tracing_App import ContactTacingApp
 
+class ContactTracingAppGUI:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("COVID Contact Tracing App")
+        
 #Create add entry and search entry buttons plus the grid
 #Create the labels, entry, and grid fields
 #Name
