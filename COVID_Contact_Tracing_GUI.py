@@ -189,70 +189,70 @@ class ContactTracingAppGUI:
         #Create an instance of the contact tracing app
         self.contact_tracing = ContactTracingApp()
 
-        #Method to handle add_entry 
-        def add_entry(self):
+    #Method to handle add_entry 
+    def add_entry(self): 
 
-            #Get all the input values from the entry fields and radiobutton variables
-            name = self.name_entry.get()
-            bday = self.bday_entry.get()
-            gender = self.gender_entry.get()
-            phone = self.phone_entry.get()
-            email = self.email_entry.get()
-            address = self.address_entry.get()
-            name_2 = self.name_2_entry.get()
-            phone_2 = self.phone_2_entry.get()
-            email_2 = self.email_2_entry.get()
-            relationship = self.relationship_entry.get()
-            date = self.date_entry.get()
-            time = self.time_entry.get()
-            vaccine_1 = self.radiobutton_1_var.get() 
-            symptoms_1 = self.radiobutton_2_var.get() 
-            exposed_1 = self.radiobutton_3_var.get() 
-            engaged_1 = self.radiobutton_4_var.get() 
-            test_1 = self.radiobutton_5_var.get() 
-            quarantine_1 = self.radiobutton_6_var.get() 
+        #Get all the input values from the entry fields and radiobutton variables
+        name = self.name_entry.get()
+        bday = self.bday_entry.get()
+        gender = self.gender_entry.get()
+        phone = self.phone_entry.get()
+        email = self.email_entry.get()
+        address = self.address_entry.get()
+        name_2 = self.name_2_entry.get()
+        phone_2 = self.phone_2_entry.get()
+        email_2 = self.email_2_entry.get()
+        relationship = self.relationship_entry.get()
+        date = self.date_entry.get()
+        time = self.time_entry.get()
+        vaccine_1 = self.radiobutton_1_var.get() 
+        symptoms_1 = self.radiobutton_2_var.get() 
+        exposed_1 = self.radiobutton_3_var.get() 
+        engaged_1 = self.radiobutton_4_var.get() 
+        test_1 = self.radiobutton_5_var.get() 
+        quarantine_1 = self.radiobutton_6_var.get() 
 
-            self.contact_tracing.add_entry(name, bday, gender, phone, email, address, name_2, phone_2, email_2, relationship, date, time, vaccine_1, symptoms_1, exposed_1, engaged_1, test_1, quarantine_1)
+        self.contact_tracing.add_entry(name, bday, gender, phone, email, address, name_2, phone_2, email_2, relationship, date, time, vaccine_1, symptoms_1, exposed_1, engaged_1, test_1, quarantine_1)
 
-        #Method to show the message box 
-        def add_entry(self):
-            self.clear_entries()
-            messagebox.showinfo("Confirmation", "Your entry has been submitted.")
+    #Method to show the message box 
+    def add_entry(self):
+        self.clear_entries()
+        messagebox.showinfo("Confirmation", "Your entry has been submitted.")
 
-        #Method to handle search_entry 
-        def search_entry(self):
-            name = self.name_entry.get()
+    #Method to handle search_entry 
+    def search_entry(self):
+        name = self.name_entry.get()
 
-            #From the ContactTracingApp class, call all the search_entry method and message box
-            entry = self.contact_tracing.search_entry(name)
+        #From the ContactTracingApp class, call all the search_entry method and message box
+        entry = self.contact_tracing.search_entry(name)
 
-            if entry:
-                print("Confirmation", "Your entry has been found:")
-                for item in entry:
-                    print(item)
-            else:
-                messagebox.showinfo("Error", "Your entry has not found")
+        if entry:
+            print("Confirmation", "Your entry has been found:")
+            for item in entry:
+                print(item)
+        else:
+            messagebox.showinfo("Error", "Your entry has not found")
 
-        #Clear all entry fields and reset the radio buttons
-        def clear_entries(self):
-            self.name_entry.delete(0, tk.END)
-            self.bday_entry.delete(0, tk.END)
-            self.gender_entry.delete(0, tk.END)
-            self.phone_entry.delete(0, tk.END)
-            self.email_entry.delete(0, tk.END)
-            self.address_entry.delete(0, tk.END)
-            self.name_2_entry.delete(0, tk.END)
-            self.phone_2_entry.delete(0, tk.END)
-            self.email_2_entry.delete(0, tk.END)
-            self.relationship_entry.delete(0, tk.END)
-            self.date_entry.delete(0, tk.END)
-            self.time_entry.delete(0, tk.END)
-            self.radiobutton_1_var.set(None) 
-            self.radiobutton_2_var.set(None) 
-            self.radiobutton_3_var.set(None) 
-            self.radiobutton_4_var.set(None) 
-            self.radiobutton_5_var.set(None) 
-            self.radiobutton_6_var.set(None)
+    #Clear all entry fields and reset the radio buttons
+    def clear_entries(self):
+        self.name_entry.delete(0, tk.END)
+        self.bday_entry.delete(0, tk.END)
+        self.gender_entry.delete(0, tk.END)
+        self.phone_entry.delete(0, tk.END)
+        self.email_entry.delete(0, tk.END)
+        self.address_entry.delete(0, tk.END)
+        self.name_2_entry.delete(0, tk.END)
+        self.phone_2_entry.delete(0, tk.END)
+        self.email_2_entry.delete(0, tk.END)
+        self.relationship_entry.delete(0, tk.END)
+        self.date_entry.delete(0, tk.END)
+        self.time_entry.delete(0, tk.END)
+        self.radiobutton_1_var.set(None) 
+        self.radiobutton_2_var.set(None) 
+        self.radiobutton_3_var.set(None) 
+        self.radiobutton_4_var.set(None) 
+        self.radiobutton_5_var.set(None) 
+        self.radiobutton_6_var.set(None)
 
 #Create the main window
 if __name__ == "__main__":
