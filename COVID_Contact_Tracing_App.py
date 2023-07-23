@@ -38,11 +38,7 @@ class ContactTracingApp:
     
     def save_search_entries(self):
         with open("Search_Entry.csv", "w", newline="", encoding="utf-8") as file:
-            writer = csv.writer(file, delimiter=";")
-            writer.writerow(["Name:", "Date of Birth:", "Gender:", "Phone Number:", "Email Address:", "Address:", "Contact Person Name:", "Contact Person Phone Number:", "Contact Person Email Address:", 
-                            "Relationship to the contact person:", "Date today:", "Time right now:", "Do you have a COVID-19 vaccine?", "Have you had any symptoms in the previous seven days?", 
-                            "Have you recently been exposed to a suspected or confirmed case?", "Have you engaged with someone who may be exhibiting symptoms?", 
-                            "In the previous 14 days, have you undergone a Covid-19 test?", "In the previous 14 days, have you undergone a self quarantine?"])
+            writer = csv.writer(file)
             
             for entry in self.entries:
                 writer.writerow(entry) 
