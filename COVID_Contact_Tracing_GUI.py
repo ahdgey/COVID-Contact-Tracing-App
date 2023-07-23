@@ -213,9 +213,6 @@ class ContactTracingAppGUI:
         quarantine_1 = self.radiobutton_6_var.get() 
 
         self.contact_tracing.add_entry(name, bday, gender, phone, email, address, name_2, phone_2, email_2, relationship, date, time, vaccine_1, symptoms_1, exposed_1, engaged_1, test_1, quarantine_1)
-
-    #Method to show the message box 
-    def add_entry(self):
         self.clear_entries()
         messagebox.showinfo("Confirmation", "Your entry has been submitted.")
 
@@ -224,12 +221,32 @@ class ContactTracingAppGUI:
         name = self.name_entry.get()
 
         #From the ContactTracingApp class, call all the search_entry method and message box
-        entry = self.contact_tracing.search_entry(name)
+        entries = self.contact_tracing.search_entry(name)
 
-        if entry:
-            print("Confirmation", "Your entry has been found:")
-            for item in entry:
-                print(item)
+        if entries:
+            message = "Your entry has been found:\n\n"
+            for entry in entries:
+                message += f"Name: {entry[0]}\n"
+                message += f"Date of Birth: {entry[1]}\n"
+                message += f"Gender: {entry[2]}\n"
+                message += f"Phone Number: {entry[3]}\n"
+                message += f"Email Address: {entry[0]}\n"
+                message += f"Address: {entry[1]}\n"
+                message += f"Contact Person Name: {entry[2]}\n"
+                message += f"Contact Person Phone Number: {entry[3]}\n"
+                message += f"Contact Person Email Address: {entry[0]}\n"
+                message += f"Relationship to the contact person: {entry[1]}\n"
+                message += f"Date today: {entry[2]}\n"
+                message += f"Time right now: {entry[3]}\n"
+                message += f"Do you have a COVID-19 vaccine? {entry[12]}\n"
+                message += f"Have you had any symptoms in the previous seven days? {entry[13]}\n"
+                message += f"Have you recently been exposed to a suspected or confirmed case? {entry[14]}\n"
+                message += f"Have you engaged with someone who may be exhibiting symptoms? {entry[15]}\n"
+                message += f"In the previous 14 days, have you undergone a Covid-19 test? {entry[16]}\n"
+                message += f"In the previous 14 days, have you undergone a self quarantine? {entry[17]}\n"
+
+            messagebox.showinfo("Confirmation", message)
+        
         else:
             messagebox.showinfo("Error", "Your entry has not found")
 
