@@ -31,9 +31,6 @@ class ContactTracingApp:
         if self.entries:
             self.save_search_entries()
 
-        else:
-            messagebox.showinfo("Error", "Your entry has not been found.")
-
         return self.entries
     
     def save_search_entries(self):
